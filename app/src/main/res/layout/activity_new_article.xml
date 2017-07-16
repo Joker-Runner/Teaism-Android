@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.luy.teaism.ui.NewArticleActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:elevation="0dp"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            android:theme="@style/ToolBarTheme"
+            app:layout_scrollFlags="scroll|enterAlways|snap"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryLight">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/action_undo"
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:layout_margin="@dimen/title_margin"
+                android:background="@drawable/undo" />
+
+            <ImageButton
+                android:id="@+id/action_redo"
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:layout_margin="@dimen/title_margin"
+                android:background="@drawable/redo" />
+
+            <ImageButton
+                android:id="@+id/action_bold"
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:layout_margin="@dimen/title_margin"
+                android:background="@drawable/bold" />
+
+            <ImageButton
+                android:id="@+id/action_h1"
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:layout_margin="@dimen/title_margin"
+                android:background="@drawable/h1" />
+
+            <ImageButton
+                android:id="@+id/action_h2"
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:layout_margin="@dimen/title_margin"
+                android:background="@drawable/h2" />
+
+            <ImageButton
+                android:id="@+id/action_h3"
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:layout_margin="@dimen/title_margin"
+                android:background="@drawable/h3" />
+
+            <ImageButton
+                android:id="@+id/action_align_left"
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:layout_margin="@dimen/title_margin"
+                android:background="@drawable/justify_left" />
+
+            <ImageButton
+                android:id="@+id/action_align_center"
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:layout_margin="@dimen/title_margin"
+                android:background="@drawable/justify_center" />
+
+            <ImageButton
+                android:id="@+id/action_align_right"
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:layout_margin="@dimen/title_margin"
+                android:background="@drawable/justify_right" />
+
+            <ImageButton
+                android:id="@+id/action_insert_image"
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:layout_margin="@dimen/title_margin"
+                android:background="@drawable/insert_image" />
+
+            <ImageButton
+                android:id="@+id/action_insert_bullets"
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:layout_margin="@dimen/title_margin"
+                android:background="@drawable/bullets" />
+
+            <ImageButton
+                android:id="@+id/action_insert_numbers"
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:layout_margin="@dimen/title_margin"
+                android:background="@drawable/numbers" />
+
+            <ImageButton
+                android:id="@+id/action_insert_link"
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:layout_margin="@dimen/title_margin"
+                android:background="@drawable/insert_link" />
+
+        </LinearLayout>
+
+    </HorizontalScrollView>
+
+    <jp.wasabeef.richeditor.RichEditor
+        android:id="@+id/rich_editor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>

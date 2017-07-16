@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    tools:context="com.luy.teaism.ui.module.TeaFoodDetailActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="@dimen/activity_horizontal_margin">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="茶食推荐信息管理"
+                android:textColor="@color/colorDarkGray"
+                android:textSize="26dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/author"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/title_margin"
+                    android:text="张鹏翔"
+                    android:textSize="18dp" />
+
+                <TextView
+                    android:id="@+id/create_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/title_margin"
+                    android:text="2017-06-29"
+                    android:textSize="18dp" />
+
+            </LinearLayout>
+
+            <WebView
+                android:id="@+id/web_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/activity_vertical_margin" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"
+                android:layout_marginLeft="@dimen/title_margin"
+                android:layout_marginRight="@dimen/title_margin"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:gravity="center_vertical">
+
+                <!--<ImageView-->
+                    <!--id-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:padding="@dimen/title_margin"-->
+                    <!--android:src="@drawable/ic_good"/>-->
+
+                <ToggleButton
+                    android:id="@+id/good_toggle_button"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginRight="@dimen/title_margin"
+                    android:background="@drawable/good_toggle_bg"
+                    android:checked="false"
+                    android:clickable="true"
+                    android:textOff=""
+                    android:textOn="" />
+
+                <TextView
+                    android:id="@+id/good_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/good_toggle_button"
+                    android:text="66"
+                    android:textSize="16dp" />
+
+                <!--<ToggleButton-->
+                <!--android:id="@+id/favorite_toggle_button"-->
+                <!--android:layout_width="24dp"-->
+                <!--android:layout_height="24dp"-->
+                <!--android:layout_marginLeft="100dp"-->
+                <!--android:background="@drawable/favorite_toggle_bg"-->
+                <!--android:checked="false"-->
+                <!--android:clickable="true"-->
+                <!--android:textOff=""-->
+                <!--android:textOn="" />-->
+
+                <LinearLayout
+                    android:id="@+id/create_comment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:clickable="true"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="3dp"
+                        android:text="评论"
+                        android:textColor="@color/colorIndigo"
+                        android:textSize="18dp" />
+
+                    <ImageButton
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:background="@drawable/ic_create_indigo_24dp" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="@dimen/title_margin"
+                android:layout_marginRight="@dimen/title_margin"
+                android:background="@color/colorLightGray" />
+
+            <TextView
+                android:id="@+id/no_comment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:layout_margin="@dimen/activity_horizontal_margin"
+                android:text="没有评论"
+                android:textSize="20dp" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/comment_recycler"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>

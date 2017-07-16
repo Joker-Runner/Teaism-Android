@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="@dimen/title_margin"
+    android:paddingBottom="@dimen/title_margin">
+
+    <ImageView
+        android:id="@+id/commentator_icon"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@color/colorRed" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="4dp"
+        android:paddingLeft="@dimen/title_margin"
+        android:paddingRight="@dimen/title_margin">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/commentator_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="张鹏翔"
+                android:textSize="16dp" />
+
+            <TextView
+                android:id="@+id/comment_good_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="66"
+                android:textSize="16dp" />
+
+            <ToggleButton
+                android:id="@+id/good_toggle_button"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_marginRight="@dimen/title_margin"
+                android:layout_toLeftOf="@id/comment_good_count"
+                android:background="@drawable/good_toggle_bg"
+                android:checked="false"
+                android:clickable="true"
+                android:textOff=""
+                android:textOn="" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/comment_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorDarkGray"
+            android:textSize="18dp"
+            android:text="这是一条评论，这是一条评论，这是一条评论，这是一条评论，这是一条评论，这是一条评论，这是一条评论，这是一条评论，这是一条评论" />
+
+        <TextView
+            android:id="@+id/create_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="4dp"
+            android:text="7月11日" />
+
+    </LinearLayout>
+
+</LinearLayout>

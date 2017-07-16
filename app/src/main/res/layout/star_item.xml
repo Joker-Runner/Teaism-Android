@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:padding="@dimen/activity_horizontal_margin"
+        android:background="@drawable/ripple_bg">
+
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="@dimen/title_margin"
+            android:layout_marginRight="@dimen/title_margin"
+            android:layout_weight="3"
+            android:ellipsize="end"
+            android:maxLines="4"
+            android:text="该模块是对有关于茶的吃食的介绍"
+            android:textColor="@color/colorDarkGray"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:background="@drawable/google"/>
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right|top"
+        android:background="#88E53935"
+        android:layout_margin="@dimen/title_margin">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="茶食"
+            android:textSize="33dp"
+            android:textColor="@color/colorWhite"/>
+
+    </FrameLayout>
+
+</FrameLayout>
