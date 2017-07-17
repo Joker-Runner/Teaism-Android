@@ -13,7 +13,6 @@ public class Utils {
     /**
      * IP 和端口号
      */
-//    private static final String IP = "123.206.201.169";
     private static final String IP = "192.168.0.2";
     private static final String PORT = "8080";
 
